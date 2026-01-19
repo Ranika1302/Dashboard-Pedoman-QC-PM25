@@ -105,7 +105,7 @@ st.markdown(
 home_clicked = False
 
 with st.container():
-    col_left, col_menu = st.columns([5, 1])
+    col_left, col_menu = st.columns([5, 2])
 
     with col_left:
         logo_col, text_col = st.columns([1, 10])
@@ -246,6 +246,7 @@ b64 = base64.b64encode(pdf_bytes).decode()
 href = f'<a href="data:application/pdf;base64,{b64}" target="_blank">📖 Open Ebook Preview</a>'
 
 st.markdown(href, unsafe_allow_html=True)
+
 
 
 

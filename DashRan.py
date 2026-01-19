@@ -222,7 +222,7 @@ with right:
  if st.session_state.show_pdf:
     st.markdown("### Preview Ebook")
     pdf64 = load_pdf_base64(EBOOK_PATH)
-   if pdf64:
+    if pdf64:
        st.markdown(
             f"""
            <iframe src="data:application/pdf;base64,{pdf64}"

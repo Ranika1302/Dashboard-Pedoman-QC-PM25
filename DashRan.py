@@ -1,6 +1,7 @@
 import streamlit as st
 from pathlib import Path
 import base64
+from streamlit_pdf_viewer import pdf_viewer
 
 # ====================================
 # KONFIGURASI DASAR
@@ -223,14 +224,17 @@ if st.session_state.show_pdf:
     st.markdown("### Preview Ebook")
     pdf64 = load_pdf_base64(EBOOK_PATH)
     if pdf64:
-       st.markdown(
-            f"""
-           <iframe src="data:application/pdf;base64,{pdf64}"
-           width="100%" height="650"></iframe>
+        pdf_viewer(EBOOK_PATH, width=800, height=800)
+    else:
+        st.error("File PDF tidak ditemukan.")
+       # st.markdown(
+       #      f"""
+       #     <iframe src="data:application/pdf;base64,{pdf64}"
+       #     width="100%" height="650"></iframe>
           
-            """,
-            unsafe_allow_html=True,
-        )
+       #      """,
+       #      unsafe_allow_html=True,
+       #  )
 
 #with open(EBOOK_PATH, "rb") as f:
 #    pdf_bytes = f.read()
@@ -241,6 +245,7 @@ if st.session_state.show_pdf:
 #href = f'<a href="data:application/pdf;base64,{b64}" target="_blank">📖 Open Ebook Preview</a>'
 
 #st.markdown(href, unsafe_allow_html=True)
+
 
 
 

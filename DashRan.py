@@ -232,19 +232,15 @@ with right:
  #           unsafe_allow_html=True,
 #        )
 
-with open(EBOOK_PATH, "Pedoman QC Ranika.pdf") as f:
+with open(file_path, "rb") as f:
     pdf_bytes = f.read()
 
 b64 = base64.b64encode(pdf_bytes).decode()
 
-st.markdown(
-    f"""
-    <a href="data:application/pdf;base64,{b64}" target="Pedoman QC Ranika.pdf">
-        📖 Open Ebook Preview
-    </a>
-    """,
-    unsafe_allow_html=True,
-)
+# Using a standard download attribute for better browser compatibility
+href = f'<a href="data:application/pdf;base64,{b64}" download="Pedoman_QC_Ranika.pdf">📖 Open Ebook Preview</a>'
+
+st.markdown(href, unsafe_allow_html=True)
 
 
 

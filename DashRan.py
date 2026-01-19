@@ -238,9 +238,10 @@ with open(EBOOK_PATH, "rb") as f:
 b64 = base64.b64encode(pdf_bytes).decode()
 
 # Using a standard download attribute for better browser compatibility
-href = f'<a href="data:application/pdf;base64,{b64}" download="Pedoman_QC_Ranika.pdf">📖 Open Ebook Preview</a>'
+href = f'<a href="data:application/pdf;base64,{b64}" target="_blank">📖 Open Ebook Preview</a>'
 
 st.markdown(href, unsafe_allow_html=True)
+
 
 
 

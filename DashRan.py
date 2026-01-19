@@ -219,28 +219,29 @@ with right:
 # PREVIEW PDF
 # ====================================
 
-# if st.session_state.show_pdf:
- #   st.markdown("### Preview Ebook")
-  #  pdf64 = load_pdf_base64(EBOOK_PATH)
- #   if pdf64:
-   #     st.markdown(
-     #       f"""
-    #       <iframe src="data:application/pdf;base64,{pdf64}"
-   #        width="100%" height="650"></iframe>
+ if st.session_state.show_pdf:
+    st.markdown("### Preview Ebook")
+    pdf64 = load_pdf_base64(EBOOK_PATH)
+   if pdf64:
+       st.markdown(
+            f"""
+           <iframe src="data:application/pdf;base64,{pdf64}"
+           width="100%" height="650"></iframe>
           
-  #          """,
- #           unsafe_allow_html=True,
-#        )
+            """,
+            unsafe_allow_html=True,
+        )
 
-with open(EBOOK_PATH, "rb") as f:
-    pdf_bytes = f.read()
+#with open(EBOOK_PATH, "rb") as f:
+#    pdf_bytes = f.read()
 
-b64 = base64.b64encode(pdf_bytes).decode()
+# b64 = base64.b64encode(pdf_bytes).decode()
 
 # Using a standard download attribute for better browser compatibility
-href = f'<a href="data:application/pdf;base64,{b64}" target="_blank">📖 Open Ebook Preview</a>'
+#href = f'<a href="data:application/pdf;base64,{b64}" target="_blank">📖 Open Ebook Preview</a>'
 
-st.markdown(href, unsafe_allow_html=True)
+#st.markdown(href, unsafe_allow_html=True)
+
 
 
 

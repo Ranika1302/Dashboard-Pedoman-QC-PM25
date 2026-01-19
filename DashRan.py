@@ -219,19 +219,19 @@ with right:
 # PREVIEW PDF
 # ====================================
 //
-if st.session_state.show_pdf:
-    st.markdown("### Preview Ebook")
-    pdf64 = load_pdf_base64(EBOOK_PATH)
-    if pdf64:
-        st.markdown(
-            f"""
-           <iframe src="data:application/pdf;base64,{pdf64}"
-           width="100%" height="650"></iframe>
+# if st.session_state.show_pdf:
+ #   st.markdown("### Preview Ebook")
+  #  pdf64 = load_pdf_base64(EBOOK_PATH)
+ #   if pdf64:
+   #     st.markdown(
+     #       f"""
+    #       <iframe src="data:application/pdf;base64,{pdf64}"
+   #        width="100%" height="650"></iframe>
           
-            """,
-            unsafe_allow_html=True,
-        )
-//
+  #          """,
+ #           unsafe_allow_html=True,
+#        )
+
 with open(EBOOK_PATH, "rb") as f:
     pdf_bytes = f.read()
 
@@ -245,5 +245,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
 
 

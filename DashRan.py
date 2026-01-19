@@ -232,7 +232,7 @@ with right:
  #           unsafe_allow_html=True,
 #        )
 
-with open(EBOOK_PATH, "rb") as f:
+with open(EBOOK_PATH, "Pedoman QC Ranika.pdf") as f:
     pdf_bytes = f.read()
 
 b64 = base64.b64encode(pdf_bytes).decode()
@@ -245,6 +245,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
 
 
 

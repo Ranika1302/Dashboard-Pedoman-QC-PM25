@@ -218,6 +218,7 @@ with right:
 # ====================================
 # PREVIEW PDF
 # ====================================
+//
 if st.session_state.show_pdf:
     st.markdown("### Preview Ebook")
     pdf64 = load_pdf_base64(EBOOK_PATH)
@@ -230,5 +231,19 @@ if st.session_state.show_pdf:
             """,
             unsafe_allow_html=True,
         )
+//
+with open(EBOOK_PATH, "rb") as f:
+    pdf_bytes = f.read()
+
+b64 = base64.b64encode(pdf_bytes).decode()
+
+st.markdown(
+    f"""
+    <a href="data:application/pdf;base64,{b64}" target="_blank">
+        📖 Open Ebook Preview
+    </a>
+    """,
+    unsafe_allow_html=True,
+)
 
 

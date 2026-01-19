@@ -17,9 +17,9 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    .block-container { padding-top: 0.6rem !important; }
-    header { margin-top: 0 !important; }
-    .header-wrap { margin-top: 0 !important; padding-top: 0.4rem !important; }
+    .block-container { padding-top: 2rem !important; }
+    header { margin-top: 1 !important; }
+    .header-wrap { margin-top: 1 !important; padding-top: 2rem !important; }
     </style>
     """,
     unsafe_allow_html=True
@@ -105,7 +105,7 @@ st.markdown(
 home_clicked = False
 
 with st.container():
-    col_left, col_menu = st.columns([5, 2])
+    col_left, col_menu = st.columns([5, 1])
 
     with col_left:
         logo_col, text_col = st.columns([1, 10])
@@ -246,6 +246,7 @@ b64 = base64.b64encode(pdf_bytes).decode()
 href = f'<a href="data:application/pdf;base64,{b64}" target="_blank">📖 Open Ebook Preview</a>'
 
 st.markdown(href, unsafe_allow_html=True)
+
 
 
 

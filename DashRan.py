@@ -224,8 +224,12 @@ if st.session_state.show_pdf:
     if pdf64:
         st.markdown(
             f"""
-            <iframe src="data:application/pdf;base64,{pdf64}"
-            width="100%" height="650"></iframe>
+           # <iframe src="data:application/pdf;base64,{pdf64}"
+           # width="100%" height="650"></iframe>
+          <a href="data:application/pdf;base64,{b64}" target="_blank">
+        📖 Open Ebook Preview
+    </a>
             """,
             unsafe_allow_html=True,
         )
+

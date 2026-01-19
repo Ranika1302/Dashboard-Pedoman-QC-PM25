@@ -173,7 +173,7 @@ with left:
         <div class="materi-card">
             <div class="materi-header">
                 <div class="materi-title-main">🔖 MATERI POKOK</div>
-                <div><b>Abstrak</b></div>
+                
             </div>
             <div class="materi-body">
         """,
@@ -246,6 +246,7 @@ b64 = base64.b64encode(pdf_bytes).decode()
 href = f'<a href="data:application/pdf;base64,{b64}" target="_blank">📖 Open Ebook Preview</a>'
 
 st.markdown(href, unsafe_allow_html=True)
+
 
 
 

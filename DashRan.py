@@ -239,12 +239,13 @@ b64 = base64.b64encode(pdf_bytes).decode()
 
 st.markdown(
     f"""
-    <a href="data:application/pdf;base64,{b64}" target="_blank">
+    <a href="data:application/pdf;base64,{b64}" target="Pedoman QC Ranika.pdf">
         📖 Open Ebook Preview
     </a>
     """,
     unsafe_allow_html=True,
 )
+
 
 
 

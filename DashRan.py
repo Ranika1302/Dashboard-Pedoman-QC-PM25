@@ -19,7 +19,7 @@ st.markdown(
     <style>
     .block-container { padding-top: 0.6rem !important; }
     header { margin-top: 0 !important; }
-    .header-wrap { margin-top: 0 !important; padding-top: 0.4rem !important; }
+    .header-wrap { margin-top: 1 !important; padding-top: 0.4rem !important; }
     </style>
     """,
     unsafe_allow_html=True
@@ -245,6 +245,7 @@ b64 = base64.b64encode(pdf_bytes).decode()
 href = f'<a href="data:application/pdf;base64,{b64}" target="_blank">📖 Open Ebook Preview</a>'
 
 st.markdown(href, unsafe_allow_html=True)
+
 
 
 

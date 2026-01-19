@@ -218,7 +218,7 @@ with right:
 # ====================================
 # PREVIEW PDF
 # ====================================
-//
+
 # if st.session_state.show_pdf:
  #   st.markdown("### Preview Ebook")
   #  pdf64 = load_pdf_base64(EBOOK_PATH)
@@ -245,6 +245,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
 
 
 
